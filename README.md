@@ -18,11 +18,16 @@ If you are making use of this work in any way (including our dataset and toolkit
 (Li Li, Khalid N. Ismail, Hubert P. H. Shum and Toby P. Breckon), In Int. Conf. 3D Vision, 2021. [[pdf](/)] [[demo](/)]
 
 ```
-@inproceedings{Li21DurLAR, 
-    author= {Li, Li, and Ismail, K.N. and Shum, Hubert P.H. and Breckon, T.P.}, 
-    booktitle= {Int. Conf. 3D Vision}, 
-    publisher= {IEEE}, title= {DurLAR: A High-fidelity 128-channel LiDAR Dataset with Panoramic Ambient and Reflectivity Imagery for Multi-modal Autonomous Driving Applications}, 
-    year= {2021}, 
-    month= {December}}
+@inproceedings{li21durlar,
+ author = {Li, L. and Ismail, K.N. and Shum, H.P.H. and Breckon, T.P.},
+ title = {DurLAR: A High-fidelity 128-channel LiDAR Dataset with Panoramic Ambient and Reflectivity Imagery for Multi-modal Autonomous Driving Applications},
+ booktitle = {Proc. Int. Conf. on 3D Vision},
+ year = {2021},
+ month = {December},
+ publisher = {IEEE},
+ keywords = {autonomous driving, dataset, high resolution LiDAR, flash LiDAR, ground truth depth, dense depth, monocular depth estimation, stereo vision, 3D},
+ note = {to appear},
+ category = {automotive 3Dvision},
+}
 ```
 ---
