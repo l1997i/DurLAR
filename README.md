@@ -10,6 +10,15 @@
 
 - **Lux Meter**: [Yocto Light V3](http://www.yoctopuce.com/EN/products/usb-environmental-sensors/yocto-light-v3), a USB ambient light sensor (lux meter), measuring ambient light up to 100,000 lux
 
+
+## Panoramic Imagery
+
+Reflectivity imagery
+![reflect_center](https://github.com/l1997i/DurLAR/blob/main/reflect_center.gif?raw=true)
+
+Ambient imagery
+![ambient_center](https://github.com/l1997i/DurLAR/blob/main/ambient_center.png?raw=true)
+
 ## Reference
 
 If you are making use of this work in any way (including our dataset and toolkits), you must please reference the following paper in any report, publication, presentation, software release or any other associated materials:
