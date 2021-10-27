@@ -17,7 +17,7 @@ Reflectivity imagery
 ![reflect_center](https://github.com/l1997i/DurLAR/blob/main/reflect_center.gif?raw=true)
 
 Ambient imagery
-![ambient_center](https://github.com/l1997i/DurLAR/blob/main/ambient_center.png?raw=true)
+![ambient_center](https://github.com/l1997i/DurLAR/blob/main/ambient_center.gif?raw=true)
 
 ## Reference
 
