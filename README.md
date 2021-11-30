@@ -19,6 +19,10 @@ Reflectivity imagery
 Ambient imagery
 ![ambient_center](https://github.com/l1997i/DurLAR/blob/main/ambient_center.gif?raw=true)
 
+## Download the Dataset
+
+[Download exemplar dataset (600 frames)](https://collections.durham.ac.uk/collections/r2gq67jr192)
+
 ## Reference
 
 If you are making use of this work in any way (including our dataset and toolkits), you must please reference the following paper in any report, publication, presentation, software release or any other associated materials:
