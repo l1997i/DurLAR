@@ -67,7 +67,7 @@ The structure of the provided calibration zip file,
 
 ```
 DurLAR_calibs/  
-├── calib_cam_to_cam.txt             [ Camera to camera calibration results ]   
+├── calib_cam_to_cam.txt              [ Camera to camera calibration results ]   
 ├── calib_imu_to_lidar.txt            [ IMU to LiDAR calibration results ]   
 └── calib_lidar_to_cam.txt            [ LiDAR to camera calibration results ]   
 ```
