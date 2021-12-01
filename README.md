@@ -19,9 +19,57 @@ Reflectivity imagery
 Ambient imagery
 ![ambient_center](https://github.com/l1997i/DurLAR/blob/main/ambient_center.gif?raw=true)
 
+## File Description
+
+Each file contains 8 topics for each frame in DurLAR dataset,
+
+- `ambient/`: panoramic ambient imagery
+- `reflec/`: panoramic reflectivity imagery
+- `image_01/`: right camera (grayscale+synced+rectified)
+- `image_02/`: left RGB camera (synced+rectified)
+- `ouster_points`: ouster LiDAR point cloud (KITTI-compatible binary format)
+- `gps`, `imu`, `lux`: csv file format
+
+The structure of the provided DurLAR full dataset zip file,  
+
+```
+DurLAR_<date>/  
+├── ambient/  
+│   ├── data/  
+│   │   └── <frame_number.png>.png   [ ..... ]   
+│   └── timestamp.txt  
+├── gps/  
+│   └── data.csv  
+├── image_01/  
+│   ├── data/  
+│   │   └── <frame_number.png>.png   [ ..... ]   
+│   └── timestamp.txt  
+├── image_02/  
+│   ├── data/  
+│   │   └── <frame_number.png>.png   [ ..... ]   
+│   └── timestamp.txt  
+├── imu/  
+│   └── data.csv  
+├── lux/  
+│   └── data.csv  
+├── ouster_points/  
+│   ├── data/  
+│   │   └── <frame_number.png>.bin   [ ..... ]   
+│   └── timestamp.txt  
+├── reflec/  
+│   ├── data/  
+│   │   └── <frame_number.png>.png   [ ..... ]   
+│   └── timestamp.txt  
+├── calib_cam_to_cam.txt             [KITTI-compatible calibration file]   
+├── calib_imu_to_velo.txt            [KITTI-compatible calibration file]   
+├── calib_velo_to_cam.txt            [KITTI-compatible calibration file]   
+└── readme.md                        [ this README file ]  
+```  
+
 ## Download the Dataset
 
-[Download exemplar dataset (600 frames)](https://collections.durham.ac.uk/collections/r2gq67jr192)
+[Download the **calibration files**](https://github.com/l1997i/DurLAR/raw/main/DurLAR_calibs.zip)  
+[Download the **exemplar dataset** (600 frames)](https://collections.durham.ac.uk/collections/r2gq67jr192)  
 
 ## Reference
 
