@@ -13,11 +13,20 @@
 
 ## Panoramic Imagery
 
-Reflectivity imagery
-![reflect_center](https://github.com/l1997i/DurLAR/blob/main/reflect_center.gif?raw=true)
+<br>
+<p align="center">
+    <img src="https://github.com/l1997i/DurLAR/blob/main/reflect_center.gif?raw=true" width="100%"/>
+    <h5 id="title" align="center">Reflectivity imagery</h5>
+</br>
 
-Ambient imagery
-![ambient_center](https://github.com/l1997i/DurLAR/blob/main/ambient_center.gif?raw=true)
+<br>
+<p align="center">
+    <img src="https://github.com/l1997i/DurLAR/blob/main/ambient_center.gif?raw=true" width="100%"/>
+    <h5 id="title" align="center">Ambient imagery</h5>
+</br>
+
+
+
 
 ## File Description
 
@@ -81,8 +90,8 @@ DurLAR_calibs/
 
 If you are making use of this work in any way (including our dataset and toolkits), you must please reference the following paper in any report, publication, presentation, software release or any other associated materials:
 
-[DurLAR: A High-fidelity 128-channel LiDAR Dataset with Panoramic Ambient and Reflectivity Imagery for Multi-modal Autonomous Driving Applications](/)
-(Li Li, Khalid N. Ismail, Hubert P. H. Shum and Toby P. Breckon), In Int. Conf. 3D Vision, 2021. [[pdf](https://www.l1997i.com/assets/pdf/li21durlar.pdf)] [[demo](/)]
+[DurLAR: A High-fidelity 128-channel LiDAR Dataset with Panoramic Ambient and Reflectivity Imagery for Multi-modal Autonomous Driving Applications](https://dro.dur.ac.uk/34293/)
+(Li Li, Khalid N. Ismail, Hubert P. H. Shum and Toby P. Breckon), In Int. Conf. 3D Vision, 2021. [[pdf](https://www.l1997i.com/assets/pdf/li21durlar_arxiv_compressed.pdf)] [[video](https://recorder-v3.slideslive.com/?share=56063&s=e141fc35-9e6e-4b6f-9b6d-1d1ad16c14de)][[poster](https://www.l1997i.com/assets/pdf/li21durlar_poster_v2_compressed.pdf)]
 
 ```
 @inproceedings{li21durlar,
