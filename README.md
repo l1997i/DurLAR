@@ -86,6 +86,13 @@ DurLAR_calibs/
 [Download the **calibration files**](https://github.com/l1997i/DurLAR/raw/main/DurLAR_calibs.zip)  
 [Download the **exemplar dataset** (600 frames)](https://collections.durham.ac.uk/collections/r2gq67jr192)  
 
+### Access for the full dataset
+
+You can choose **either** way to apply the access for the full dataset. 您可任选以下其中**任意**链接申请访问完整数据集。
+
+[1. Access for the full dataset](https://forms.gle/ZjSs3PWeGjjnXmwg9)  
+[2. 申请访问完整数据集](https://wj.qq.com/s2/9459309/4cdd/)
+
 ## Reference
 
 If you are making use of this work in any way (including our dataset and toolkits), you must please reference the following paper in any report, publication, presentation, software release or any other associated materials:
