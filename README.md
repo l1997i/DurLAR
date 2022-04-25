@@ -45,17 +45,17 @@ The structure of the provided DurLAR full dataset zip file,
 DurLAR_<date>/  
 ├── ambient/  
 │   ├── data/  
-│   │   └── <frame_number.png>.png   [ ..... ]   
+│   │   └── <frame_number.png>   [ ..... ]   
 │   └── timestamp.txt  
 ├── gps/  
 │   └── data.csv  
 ├── image_01/  
 │   ├── data/  
-│   │   └── <frame_number.png>.png   [ ..... ]   
+│   │   └── <frame_number.png>   [ ..... ]   
 │   └── timestamp.txt  
 ├── image_02/  
 │   ├── data/  
-│   │   └── <frame_number.png>.png   [ ..... ]   
+│   │   └── <frame_number.png>   [ ..... ]   
 │   └── timestamp.txt  
 ├── imu/  
 │   └── data.csv  
@@ -63,11 +63,11 @@ DurLAR_<date>/
 │   └── data.csv  
 ├── ouster_points/  
 │   ├── data/  
-│   │   └── <frame_number.png>.bin   [ ..... ]   
+│   │   └── <frame_number.bin>   [ ..... ]   
 │   └── timestamp.txt  
 ├── reflec/  
 │   ├── data/  
-│   │   └── <frame_number.png>.png   [ ..... ]   
+│   │   └── <frame_number.png>   [ ..... ]   
 │   └── timestamp.txt  
 └── readme.md                        [ this README file ]  
 ```  
