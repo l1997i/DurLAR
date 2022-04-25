@@ -69,7 +69,7 @@ DurLAR_<date>/
 │   ├── data/  
 │   │   └── <frame_number.png>   [ ..... ]   
 │   └── timestamp.txt  
-└── readme.md                        [ this README file ]  
+└── readme.md                    [ this README file ]  
 ```  
 
 The structure of the provided calibration zip file,  
