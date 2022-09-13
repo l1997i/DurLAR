@@ -93,6 +93,8 @@ You can request access to the full dataset in **either** of the way you choose. 
 [1. Access for the full dataset](https://forms.gle/ZjSs3PWeGjjnXmwg9)  
 [2. 申请访问完整数据集](https://wj.qq.com/s2/9459309/4cdd/)
 
+Once you have completed either of the forms above, the download link will be showed on the end page **automatically**.
+
 ## Reference
 
 If you are making use of this work in any way (including our dataset and toolkits), you must please reference the following paper in any report, publication, presentation, software release or any other associated materials:
