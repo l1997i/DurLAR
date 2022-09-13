@@ -93,7 +93,37 @@ You can request access to the full dataset in **either** of the way you choose. 
 [1. Access for the full dataset](https://forms.gle/ZjSs3PWeGjjnXmwg9)  
 [2. 申请访问完整数据集](https://wj.qq.com/s2/9459309/4cdd/)
 
-Once you have completed either of the forms above, the download link will be showed on the end page **automatically**.
+### Usage of the downloading script
+
+Once you have completed either of the forms above, the download script and instruction will be showed on the end page **automatically**. You will be able to download the DurLAR dataset using the **command line** (run in the Ubuntu Terminal). For the first time, it’s very likely that you need to make the durlar_download file executable, using follow command,
+
+``` bash
+chmod +x durlar_download
+```
+ 
+By default, this script downloads the small subset for simple testing. Use the following command: 
+
+```bash
+./durlar_download
+```
+ 
+At the same time, you can also choose to download datasets of different sizes and test drives. 
+
+```
+usage: ./durlar_download [dataset_sample_size] [drive]
+dataset_sample_size = [ small | medium | full ]
+drive = 1 ... 5
+```
+ 
+The DurLAR dataset is very huge, so please download the full dataset only when necessary, and use the following command: 
+
+```bash
+./durlar_download full 5
+```
+ 
+Your network must not have any problems during the entire download process. In case of network problems, please delete all DurLAR dataset folder and re-run the download command.
+ 
+The download script is now only support Ubuntu (tested on Ubuntu 18.04 and Ubuntu 20.04, amd64) for now. Please refer to https://collections.durham.ac.uk/collections/r2gq67jr192 to download the dataset for other OS manually.
 
 ## Reference
 
