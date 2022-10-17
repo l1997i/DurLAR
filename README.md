@@ -130,7 +130,7 @@ The download script is now only support Ubuntu (tested on Ubuntu 18.04 and Ubunt
 If you are making use of this work in any way (including our dataset and toolkits), you must please reference the following paper in any report, publication, presentation, software release or any other associated materials:
 
 [DurLAR: A High-fidelity 128-channel LiDAR Dataset with Panoramic Ambient and Reflectivity Imagery for Multi-modal Autonomous Driving Applications](https://dro.dur.ac.uk/34293/)
-(Li Li, Khalid N. Ismail, Hubert P. H. Shum and Toby P. Breckon), In Int. Conf. 3D Vision, 2021. [[pdf](https://www.l1997i.com/assets/pdf/li21durlar_arxiv_compressed.pdf)] [[video](https://recorder-v3.slideslive.com/?share=56063&s=e141fc35-9e6e-4b6f-9b6d-1d1ad16c14de)][[poster](https://www.l1997i.com/assets/pdf/li21durlar_poster_v2_compressed.pdf)]
+(Li Li, Khalid N. Ismail, Hubert P. H. Shum and Toby P. Breckon), In Int. Conf. 3D Vision, 2021. [[pdf](https://www.l1997i.com/assets/pdf/li21durlar_arxiv_compressed.pdf)] [[video](https://youtu.be/1IAC9RbNYjY)][[poster](https://www.l1997i.com/assets/pdf/li21durlar_poster_v2_compressed.pdf)]
 
 ```
 @inproceedings{li21durlar,
@@ -141,7 +141,6 @@ If you are making use of this work in any way (including our dataset and toolkit
  month = {December},
  publisher = {IEEE},
  keywords = {autonomous driving, dataset, high resolution LiDAR, flash LiDAR, ground truth depth, dense depth, monocular depth estimation, stereo vision, 3D},
- note = {to appear},
  category = {automotive 3Dvision},
 }
 ```
