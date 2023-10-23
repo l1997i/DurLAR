@@ -125,6 +125,21 @@ Your network must not have any problems during the entire download process. In c
  
 The download script is now only support Ubuntu (tested on Ubuntu 18.04 and Ubuntu 20.04, amd64) for now. Please refer to https://collections.durham.ac.uk/collections/r2gq67jr192 to download the dataset for other OS manually.
 
+# Folder \#Frame Verification
+
+For the convenience of verifying folder data, we provide the number of frames each folder contains.
+
+| Folder   | # of Frames |
+|----------|-------------|
+| 20210716 | 41993       |
+| 20210901 | 23347       |
+| 20211012 | 28642       |
+| 20211208 | 26850       |
+| 20211209 | 25079       |
+|**total** | **145911**  |
+
+---
+
 ## Reference
 
 If you are making use of this work in any way (including our dataset and toolkits), you must please reference the following paper in any report, publication, presentation, software release or any other associated materials:
