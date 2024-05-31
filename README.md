@@ -130,7 +130,7 @@ Your network must not have any problems during the entire download process. In c
  
 The download script is now only supported on Ubuntu (tested on Ubuntu 18.04 and Ubuntu 20.04, amd64) for now. Please refer to https://collections.durham.ac.uk/collections/r2gq67jr192 to download the dataset for other OS manually.
 
-## CSV format for `imu`, `gps`, and `lux` Ttopics
+## CSV format for `imu`, `gps`, and `lux` topics
 
 ### Format description
 
