@@ -1,4 +1,8 @@
-![DurLAR](https://github.com/l1997i/DurLAR/blob/main/head.png?raw=true)
+# DurLAR: A High-Fidelity 128-Channel LiDAR Dataset
+
+<!-- ![DurLAR](https://github.com/l1997i/DurLAR/blob/main/head.png?raw=true) -->
+
+https://github.com/l1997i/DurLAR/assets/35445094/2c6d4056-a6de-4fad-9576-693efe2860f0
 
 ## Sensor placement
 
@@ -24,8 +28,6 @@
     <img src="https://github.com/l1997i/DurLAR/blob/main/ambient_center.gif?raw=true" width="100%"/>
     <h5 id="title" align="center">Ambient imagery</h5>
 </br>
-
-
 
 
 ## File Description
@@ -81,12 +83,15 @@ DurLAR_calibs/
 └── calib_lidar_to_cam.txt            [ LiDAR to camera calibration results ]   
 ```
 
-## Download the Dataset
+## Download the dataset
 
-[Download the **calibration files**](https://github.com/l1997i/DurLAR/raw/main/DurLAR_calibs.zip)  
-[Download the **exemplar dataset** (600 frames)](https://collections.durham.ac.uk/collections/r2gq67jr192)  
+- [Download the **calibration files**](https://github.com/l1997i/DurLAR/raw/main/DurLAR_calibs.zip)  
+- [Download the **exemplar dataset** (600 frames)](https://collections.durham.ac.uk/collections/r2gq67jr192)
+- [Download the **full dataset**](https://github.com/l1997i/DurLAR?tab=readme-ov-file#access-for-the-full-dataset) (Fill in the form to request access to the full dataset)
 
-### Access for the full dataset
+> Note that [we did not include CSV header information](https://github.com/l1997i/DurLAR/issues/9) in the [**exemplar dataset** (600 frames)](https://collections.durham.ac.uk/collections/r2gq67jr192). You can refer to [Header of csv files](https://github.com/l1997i/DurLAR?tab=readme-ov-file#header-of-csv-files) to get the first line of the `csv` files.
+
+### Access to the full dataset
 
 You can request access to the full dataset in **either** of the way you choose. 您可任选以下其中**任意**链接申请访问完整数据集。
 
@@ -95,7 +100,7 @@ You can request access to the full dataset in **either** of the way you choose. 
 
 ### Usage of the downloading script
 
-Once you have completed either of the forms above, the download script and instruction will be showed on the end page **automatically**. You will be able to download the DurLAR dataset using the **command line** (run in the Ubuntu Terminal). For the first time, it’s very likely that you need to make the durlar_download file executable, using follow command,
+Once you have completed either of the forms above, the download script and instructions will be shown on the end page **automatically**. You will be able to download the DurLAR dataset using the **command line** (run in the Ubuntu Terminal). For the first time, you likely need to make the `durlar_download` file executable, using follow command,
 
 ``` bash
 chmod +x durlar_download
@@ -121,11 +126,62 @@ The DurLAR dataset is very huge, so please download the full dataset only when n
 ./durlar_download full 5
 ```
  
-Your network must not have any problems during the entire download process. In case of network problems, please delete all DurLAR dataset folder and re-run the download command.
+Your network must not have any problems during the entire download process. In case of network problems, please delete all DurLAR dataset folders and re-run the download command.
  
-The download script is now only support Ubuntu (tested on Ubuntu 18.04 and Ubuntu 20.04, amd64) for now. Please refer to https://collections.durham.ac.uk/collections/r2gq67jr192 to download the dataset for other OS manually.
+The download script is now only supported on Ubuntu (tested on Ubuntu 18.04 and Ubuntu 20.04, amd64) for now. Please refer to https://collections.durham.ac.uk/collections/r2gq67jr192 to download the dataset for other OS manually.
 
-# Folder \#Frame Verification
+## CSV format for `imu`, `gps`, and `lux` Ttopics
+
+### Format description
+
+Our `imu`, `gps`, and `lux` data are all in `CSV` format. The **first row** of the `CSV` file contains headers that **describe the meaning of each column**. Taking `imu` csv file for example (only the first 9 rows are displayed),
+
+1. `%time`: Timestamps in Unix epoch format.
+2. `field.header.seq`: Sequence numbers.
+3. `field.header.stamp`: Header timestamps.
+4. `field.header.frame_id`: Frame of reference, labeled as "gps".
+5. `field.orientation.x`: X-component of the orientation quaternion.
+6. `field.orientation.y`: Y-component of the orientation quaternion.
+7. `field.orientation.z`: Z-component of the orientation quaternion.
+8. `field.orientation.w`: W-component of the orientation quaternion.
+9. `field.orientation_covariance0`: Covariance of the orientation data.
+
+![image](https://github.com/l1997i/DurLAR/assets/35445094/18c1e563-c137-44ba-9834-345120026db0)
+
+### Header of `csv` files
+
+The first line of the `csv` files is shown as follows.
+
+For the GPS, 
+```csv
+time,field.header.seq,field.header.stamp,field.header.frame_id,field.status.status,field.status.service,field.latitude,field.longitude,field.altitude,field.position_covariance0,field.position_covariance1,field.position_covariance2,field.position_covariance3,field.position_covariance4,field.position_covariance5,field.position_covariance6,field.position_covariance7,field.position_covariance8,field.position_covariance_type
+```
+
+For the IMU, 
+```
+time,field.header.seq,field.header.stamp,field.header.frame_id,field.orientation.x,field.orientation.y,field.orientation.z,field.orientation.w,field.orientation_covariance0,field.orientation_covariance1,field.orientation_covariance2,field.orientation_covariance3,field.orientation_covariance4,field.orientation_covariance5,field.orientation_covariance6,field.orientation_covariance7,field.orientation_covariance8,field.angular_velocity.x,field.angular_velocity.y,field.angular_velocity.z,field.angular_velocity_covariance0,field.angular_velocity_covariance1,field.angular_velocity_covariance2,field.angular_velocity_covariance3,field.angular_velocity_covariance4,field.angular_velocity_covariance5,field.angular_velocity_covariance6,field.angular_velocity_covariance7,field.angular_velocity_covariance8,field.linear_acceleration.x,field.linear_acceleration.y,field.linear_acceleration.z,field.linear_acceleration_covariance0,field.linear_acceleration_covariance1,field.linear_acceleration_covariance2,field.linear_acceleration_covariance3,field.linear_acceleration_covariance4,field.linear_acceleration_covariance5,field.linear_acceleration_covariance6,field.linear_acceleration_covariance7,field.linear_acceleration_covariance8
+```
+
+For the LUX,
+```csv
+time,field.header.seq,field.header.stamp,field.header.frame_id,field.illuminance,field.variance
+```
+
+### To process the `csv` files
+
+To process the `csv` files, you can use multiple ways. For example,
+
+**Python**: Use the pandas library to read the CSV file with the following code:
+```python
+import pandas as pd
+df = pd.read_csv('data.csv')
+print(df)
+```
+
+**Text Editors**: Simple text editors like `Notepad` (Windows) or `TextEdit` (Mac) can also open `CSV` files, though they are less suited for data analysis.
+
+
+## Folder \#Frame verification
 
 For the convenience of verifying folder data, we provide the number of frames each folder contains.
 
@@ -155,7 +211,7 @@ If you are making use of this work in any way (including our dataset and toolkit
  year = {2021},
  month = {December},
  publisher = {IEEE},
- keywords = {autonomous driving, dataset, high resolution LiDAR, flash LiDAR, ground truth depth, dense depth, monocular depth estimation, stereo vision, 3D},
+ keywords = {autonomous driving, dataset, high-resolution LiDAR, flash LiDAR, ground truth depth, dense depth, monocular depth estimation, stereo vision, 3D},
  category = {automotive 3Dvision},
 }
 ```
