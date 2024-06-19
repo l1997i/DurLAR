@@ -1,3 +1,8 @@
+[![Durham](https://img.shields.io/badge/UK-Durham-blueviolet)](https://durham-repository.worktribe.com/output/1138941/durlar-a-high-fidelity-128-channel-lidar-dataset-with-panoramic-ambient-and-reflectivity-imagery-for-multi-modal-autonomous-driving-applications)
+[![arXiv](https://img.shields.io/badge/arXiv-2406.10068-b31b1b.svg)](https://arxiv.org/abs/2406.10068)
+[![GitHub license](https://img.shields.io/badge/license-Apache2.0-blue.svg)](https://github.com/l1997i/lim3d/blob/main/LICENSE)
+![Stars](https://img.shields.io/github/stars/l1997i/durlar?style=social)
+
 # DurLAR: A High-Fidelity 128-Channel LiDAR Dataset
 
 <!-- ![DurLAR](https://github.com/l1997i/DurLAR/blob/main/head.png?raw=true) -->
