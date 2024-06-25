@@ -88,24 +88,31 @@ DurLAR_calibs/
 └── calib_lidar_to_cam.txt            [ LiDAR to camera calibration results ]   
 ```
 
-## Download the dataset
+## Get Started
 
 - [Download the **calibration files**](https://github.com/l1997i/DurLAR/raw/main/DurLAR_calibs.zip)  
+- [Download the **calibration files** (v2, targetless)](https://github.com/l1997i/DurLAR/raw/main/DurLAR_calibs_v2.zip) 
+- [Download the **exemplar ROS bag** (for targetless calibration)](https://durhamuniversity-my.sharepoint.com/:f:/g/personal/mznv82_durham_ac_uk/Ei28Yy-Gb_BKoavvJ6R_jLcBfTZ_xM5cZhEFgMFNK9HhyQ?e=rxPgI9)
 - [Download the **exemplar dataset** (600 frames)](https://collections.durham.ac.uk/collections/r2gq67jr192)
 - [Download the **full dataset**](https://github.com/l1997i/DurLAR?tab=readme-ov-file#access-for-the-full-dataset) (Fill in the form to request access to the full dataset)
 
 > Note that [we did not include CSV header information](https://github.com/l1997i/DurLAR/issues/9) in the [**exemplar dataset** (600 frames)](https://collections.durham.ac.uk/collections/r2gq67jr192). You can refer to [Header of csv files](https://github.com/l1997i/DurLAR?tab=readme-ov-file#header-of-csv-files) to get the first line of the `csv` files.
 
+> **calibration files** (v2, targetless): Following the publication of the proposed DurLAR dataset and the corresponding paper, we identify a more advanced [targetless calibration method](https://github.com/koide3/direct_visual_lidar_calibration) ([#4](https://github.com/l1997i/DurLAR/issues/4)) that surpasses the LiDAR-camera calibration technique previously employed. We provide [**exemplar ROS bag**](https://durhamuniversity-my.sharepoint.com/:f:/g/personal/mznv82_durham_ac_uk/Ei28Yy-Gb_BKoavvJ6R_jLcBfTZ_xM5cZhEFgMFNK9HhyQ?e=rxPgI9) for [targetless calibration](https://github.com/koide3/direct_visual_lidar_calibration), and also corresponding [calibration results (v2)](https://github.com/l1997i/DurLAR/raw/main/DurLAR_calibs_v2.zip). Please refer to [Appendix (arXiv)](https://arxiv.org/pdf/2406.10068) for more details. 
+
 ### Access to the full dataset
 
-You can request access to the full dataset in **either** of the way you choose. 您可任选以下其中**任意**链接申请访问完整数据集。
+Access to the complete DurLAR dataset can be requested through **either** of the way. 您可任选以下其中**任意**链接申请访问完整数据集。
 
 [1. Access for the full dataset](https://forms.gle/ZjSs3PWeGjjnXmwg9)  
 [2. 申请访问完整数据集](https://wj.qq.com/s2/9459309/4cdd/)
 
 ### Usage of the downloading script
 
-Once you have completed either of the forms above, the download script and instructions will be shown on the end page **automatically**. You will be able to download the DurLAR dataset using the **command line** (run in the Ubuntu Terminal). For the first time, you likely need to make the `durlar_download` file executable, using follow command,
+Upon completion of the form, the download script `durlar_download` and accompanying instructions will be **automatically** provided. The DurLAR dataset can then be downloaded via the command line.
+
+For the first use, it is highly likely that the `durlar_download` file will need to be made
+executable:
 
 ``` bash
 chmod +x durlar_download
@@ -117,23 +124,24 @@ By default, this script downloads the small subset for simple testing. Use the f
 ./durlar_download
 ```
  
-At the same time, you can also choose to download datasets of different sizes and test drives. 
-
+It is also possible to select and download various test drives:
 ```
 usage: ./durlar_download [dataset_sample_size] [drive]
 dataset_sample_size = [ small | medium | full ]
 drive = 1 ... 5
 ```
  
-The DurLAR dataset is very huge, so please download the full dataset only when necessary, and use the following command: 
-
+Given the substantial size of the DurLAR dataset, please download the complete dataset
+only when necessary:
 ```bash
 ./durlar_download full 5
 ```
  
-Your network must not have any problems during the entire download process. In case of network problems, please delete all DurLAR dataset folders and re-run the download command.
- 
-The download script is now only supported on Ubuntu (tested on Ubuntu 18.04 and Ubuntu 20.04, amd64) for now. Please refer to https://collections.durham.ac.uk/collections/r2gq67jr192 to download the dataset for other OS manually.
+Throughout the entire download process, it is important that your network remains
+stable and free from any interruptions. In the event of network issues, please delete all
+DurLAR dataset folders and rerun the download script. Currently, our script supports
+only Ubuntu (tested on Ubuntu 18.04 and Ubuntu 20.04, amd64). For downloading the
+DurLAR dataset on other operating systems, please refer to [Durham Collections](https://collections.durham.ac.uk/collections/r2gq67jr192) for instructions.
 
 ## CSV format for `imu`, `gps`, and `lux` topics
 
@@ -186,9 +194,9 @@ print(df)
 **Text Editors**: Simple text editors like `Notepad` (Windows) or `TextEdit` (Mac) can also open `CSV` files, though they are less suited for data analysis.
 
 
-## Folder \#Frame verification
+## Folder \#Frame Verification
 
-For the convenience of verifying folder data, we provide the number of frames each folder contains.
+For easy verification of folder data and integrity, we provide the number of frames in each drive folder, as well as the [MD5 checksums](https://collections.durham.ac.uk/collections/r2gq67jr192?utf8=%E2%9C%93&cq=MD5&sort=) of the zip files.
 
 | Folder   | # of Frames |
 |----------|-------------|
