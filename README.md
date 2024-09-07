@@ -9,6 +9,10 @@
 
 https://github.com/l1997i/DurLAR/assets/35445094/2c6d4056-a6de-4fad-9576-693efe2860f0
 
+## News
+
+- [2024/09/07] We provide the **OneDrive link** for downloading the DurLAR dataset. To access the OneDrive link, please email your affiliation, name, and intended usage to i@luisli.org.
+
 ## Sensor placement
 
 - **LiDAR**: [Ouster OS1-128 LiDAR sensor](https://ouster.com/products/os1-lidar-sensor/) with 128 channels vertical resolution
@@ -102,10 +106,13 @@ DurLAR_calibs/
 
 ### Access to the full dataset
 
-Access to the complete DurLAR dataset can be requested through **either** of the way. 您可任选以下其中**任意**链接申请访问完整数据集。
+Access to the complete DurLAR dataset can be requested through **one** of the following ways. 您可任选以下其中**任意**链接申请访问完整数据集。
 
-[1. Access for the full dataset](https://forms.gle/ZjSs3PWeGjjnXmwg9)  
+[1. Access for the full dataset](https://forms.gle/ZjSs3PWeGjjnXmwg9) 
+
 [2. 申请访问完整数据集](https://wj.qq.com/s2/9459309/4cdd/)
+
+[3. OneDrive link](https://luisweb-my.sharepoint.com/:f:/g/personal/i_luisli_org/Eh7F34jln5tIgVnVAkzZZ_sBX8OgicgyeQ-1j5wzwYMFfw?e=b4hrrV). If you need access to the DurLAR dataset, please send your affiliation, name, and intended usage to i@luisli.org, and we will provide the access password.
 
 ### Usage of the downloading script
 
