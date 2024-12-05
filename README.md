@@ -11,7 +11,8 @@ https://github.com/l1997i/DurLAR/assets/35445094/2c6d4056-a6de-4fad-9576-693efe2
 
 ## News
 
-- [2024/09/07] We provide the **OneDrive link** for downloading the DurLAR dataset. To access the OneDrive link, please email your affiliation, name, and intended usage to i@luisli.org.
+- [2024/12/05] We provide the **intrinsic parameters** of our OS1-128 LiDAR [[download]](os1-128.json).
+- [2024/09/07] We provide the **OneDrive link** [[download]](https://luisweb-my.sharepoint.com/:f:/g/personal/i_luisli_org/Eh7F34jln5tIgVnVAkzZZ_sBX8OgicgyeQ-1j5wzwYMFfw?e=b4hrrV) for downloading the DurLAR dataset. To access the OneDrive link, please email your affiliation, name, and intended usage to i@luisli.org.
 
 ## Sensor placement
 
@@ -213,6 +214,12 @@ For easy verification of folder data and integrity, we provide the number of fra
 | 20211208 | 26850       |
 | 20211209 | 25079       |
 |**total** | **145911**  |
+
+## Intrinsic Parameters of Our Ouster OS1-128 LiDAR
+
+The intrinsic JSON file of our LiDAR can be downloaded at [this link](os1-128.json). For more information, visit the [official user manual of OS1-128](https://data.ouster.io/downloads/software-user-manual/firmware-user-manual-v3.1.0.pdf).
+
+Please note that **sensitive information, such as the serial number and unique device ID, has been redacted** (indicated as XXXXXXX). 
 
 ---
 
