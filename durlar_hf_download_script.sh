@@ -16,6 +16,17 @@ CLEANUP_AFTER_EXTRACTION=true  # Set to true to delete .tar files after extracti
 # === Fixed Configuration (No Need to Modify) ===
 HF_DATASET_ID="l1997i/DurLAR"  # The dataset ID on Hugging Face
 
+# === Display the Configuration ===
+echo "====================================="
+echo " DurLAR Dataset Download Configuration"
+echo "====================================="
+echo "Hugging Face Access Token  : $HF_TOKEN"
+echo "Dataset ID                 : $HF_DATASET_ID"
+echo "Download Directory         : $DOWNLOAD_DIR"
+echo "Extraction Directory       : $EXTRACT_DIR"
+echo "Cleanup After Extraction   : $CLEANUP_AFTER_EXTRACTION"
+echo "====================================="
+
 # === Create necessary directories ===
 mkdir -p "$DOWNLOAD_DIR"
 mkdir -p "$EXTRACT_DIR"
@@ -51,6 +62,14 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 echo "Extraction completed successfully!"
+
+# === Fixing directory structure ===
+UNNECESSARY_DIR="$EXTRACT_DIR/home2/mznv82/dataset/DurLAR/dataset/DurLAR_raw"
+if [ -d "$UNNECESSARY_DIR" ]; then
+    echo "Fixing folder structure..."
+    mv "$UNNECESSARY_DIR"/* "$EXTRACT_DIR"/  # Move contents to target directory
+    rm -rf "$EXTRACT_DIR/home2"  # Remove unnecessary hierarchy
+fi
 
 # === Cleanup downloaded .tar files if enabled ===
 if [ "$CLEANUP_AFTER_EXTRACTION" = true ]; then
