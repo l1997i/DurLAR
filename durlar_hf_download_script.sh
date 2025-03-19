@@ -8,7 +8,6 @@
 ################################################################################
 
 # === User Configuration (Modify as Needed) ===
-HF_TOKEN="YOUR_HF_ACCESS_TOKEN"  # Set your Hugging Face access token
 DOWNLOAD_DIR="$HOME/DurLAR_dataset"  # Directory to store downloaded .tar parts
 EXTRACT_DIR="$HOME/DurLAR_extracted" # Directory where extracted dataset will be stored
 CLEANUP_AFTER_EXTRACTION=true  # Set to true to delete .tar files after extraction, false to keep them
@@ -20,7 +19,6 @@ HF_DATASET_ID="l1997i/DurLAR"  # The dataset ID on Hugging Face
 echo "====================================="
 echo " DurLAR Dataset Download Configuration"
 echo "====================================="
-echo "Hugging Face Access Token  : $HF_TOKEN"
 echo "Dataset ID                 : $HF_DATASET_ID"
 echo "Download Directory         : $DOWNLOAD_DIR"
 echo "Extraction Directory       : $EXTRACT_DIR"
@@ -33,12 +31,12 @@ mkdir -p "$EXTRACT_DIR"
 
 # === Authenticate with Hugging Face CLI ===
 echo "Authenticating with Hugging Face..."
-huggingface-cli login --token "$HF_TOKEN"
-if [ $? -ne 0 ]; then
-    echo "Hugging Face authentication failed. Please check your token."
-    exit 1
+login_status=$(huggingface-cli whoami 2>&1)
+if echo "$login_status" | grep -q "Not logged in"; then
+    echo "ERROR: Not logged in to Hugging Face. Please run 'huggingface-cli login' first!"
+else
+    echo "Logged in successfully as $login_status."
 fi
-echo "Authentication successful!"
 
 # === Download the dataset ===
 echo "Downloading dataset to $DOWNLOAD_DIR..."
