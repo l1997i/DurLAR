@@ -29,15 +29,6 @@ echo "====================================="
 mkdir -p "$DOWNLOAD_DIR"
 mkdir -p "$EXTRACT_DIR"
 
-# === Authenticate with Hugging Face CLI ===
-echo "Authenticating with Hugging Face..."
-login_status=$(huggingface-cli whoami 2>&1)
-if echo "$login_status" | grep -q "Not logged in"; then
-    echo "ERROR: Not logged in to Hugging Face. Please run 'huggingface-cli login' first!"
-else
-    echo "Logged in successfully as $login_status."
-fi
-
 # === Download the dataset ===
 echo "Downloading dataset to $DOWNLOAD_DIR..."
 huggingface-cli download "$HF_DATASET_ID" --repo-type dataset --local-dir "$DOWNLOAD_DIR" --resume
