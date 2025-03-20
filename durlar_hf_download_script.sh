@@ -47,14 +47,10 @@ if [ $? -ne 0 ]; then
 fi
 echo "Download completed!"
 
-# === Merge tar parts into a single archive ===
-echo "Merging .tar parts into a single archive..."
-cd "$DOWNLOAD_DIR"
-cat DurLAR_dataset.tar* > DurLAR_dataset.tar
-
-# === Extract dataset using tar ===
-echo "Extracting dataset to $EXTRACT_DIR..."
-tar -xvf DurLAR_dataset.tar -C "$EXTRACT_DIR"
+# === Stream all parts into tar, extracting on the fly 
+cd "$DOWNLOAD_DIR" || exit 1
+echo "Streaming .tar parts directly to extractor..."
+cat DurLAR_dataset.tar* | tar --use-compress-program="pigz -p $(nproc) -d" -xvf - -C "$EXTRACT_DIR"
 if [ $? -ne 0 ]; then
     echo "Extraction failed! Please check the downloaded files."
     exit 1
