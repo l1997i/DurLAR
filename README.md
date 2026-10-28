@@ -169,7 +169,8 @@ Optionally, If you have **pigz** installed, you can extract using **multi-thread
 ```bash
 which pigz # it should correctly return the path of pigz
 
-tar --use-compress-program="pigz -p $(nproc)" -xvf DurLAR_dataset/DurLAR_dataset.tar -C /your/desired/path
+# On macOS, nproc is not available (sysctl is used instead) and bsdtar needs the explicit -d
+tar --use-compress-program="pigz -p $(nproc 2>/dev/null || sysctl -n hw.ncpu) -d" -xvf DurLAR_dataset_full.tar -C /your/desired/path
 ```
 
 ### Cleanup (Optional)
