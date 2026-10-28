@@ -109,21 +109,23 @@ DurLAR_calibs/
 
 ###  Prerequisites
 
-- Before starting, ensure you have the [**Hugging Face CLI (huggingface_hub)**](https://huggingface.co/docs/huggingface_hub/en/guides/cli) installed:
+- Before starting, ensure you have the [**Hugging Face CLI (`hf`, part of huggingface_hub)**](https://huggingface.co/docs/huggingface_hub/en/guides/cli) installed:
 
-  ​	Install it via: ```pip install -U "huggingface_hub[cli]"```
+  ​	Install it via: ```pip install -U huggingface_hub```
 
-- Since the **DurLAR dataset** is a [gated (restricted access) dataset](https://huggingface.co/docs/hub/datasets-gated) on Hugging Face, you need to authenticate before downloading it. 
+- Logging in to Hugging Face is recommended. The **DurLAR dataset** can currently be downloaded without logging in, but anonymous downloads have lower rate limits.
 
   - You first need a Hugging Face account. If you don’t have one, please register.
-  - Authenticate via the command line **on the computer where you want to download the dataset** by entering: `huggingface-cli login`. Following the instructions of that command, and it will prompt you for your Hugging Face **Access Token**.
-  - Open [this link](https://huggingface.co/datasets/l1997i/DurLAR) and login to your Hugging Face account. At the top of the page, in the section **“You need to agree to share your contact information to access this dataset”**, agree to the conditions and access the dataset content. If you have already agreed and been automatically granted access, the page will display: **“Gated dataset: You have been granted access to this dataset.”**
+  - Log in via the command line **on the computer where you want to download the dataset** by entering: `hf auth login`. You can log in from your browser or with a Hugging Face **Access Token** from [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens). Alternatively, set the `HF_TOKEN` environment variable.
+  - If [the dataset page](https://huggingface.co/datasets/l1997i/DurLAR) shows **“You need to agree to share your contact information to access this dataset”**, log in, agree to the conditions, and wait until the page says you have been granted access.
 
 > **Note**: The Hugging Face service may be restricted in certain countries or regions. In such cases, you may consider using a Hugging Face mirror (Hugging Face 镜像) as an alternative.
 
 ### Download the dataset using scripts (recommended)
 
 We provide a [pre-written Bash script](durlar_hf_download_script.sh) to download the dataset from Hugging Face. You need to manually modify the **User Configuration (Modify as Needed)** section at the beginning of [durlar_hf_download_script.sh](durlar_hf_download_script.sh) to match your desired paths and features.
+
+If the download is interrupted, run the script again: parts that are already complete are skipped, and an interrupted part is downloaded again from the start.
 
 If you encounter any issues (e.g., network problems or unexpected interruptions), you can also modify this script to fit your needs. For example, if the extraction process is interrupted, you can manually comment out the dataset download section and resume from extraction.
 
@@ -134,17 +136,17 @@ If the above script does not work, you can download the dataset manually. This o
 To download all dataset files from Hugging Face, use:
 
 ```bash
-huggingface-cli download l1997i/DurLAR --repo-type dataset --local-dir [YOUR_DATASET_DOWNLOAD_PATH]
+hf download l1997i/DurLAR --repo-type dataset --local-dir [YOUR_DATASET_DOWNLOAD_PATH]
 ```
 
 The parameter `--local-dir` is optional. For example,
 
 ```bash
 # Example 1: The recommended (and default) way to download files from the Hub is to use the cache-system, without --local-dir specified
-huggingface-cli download l1997i/DurLAR --repo-type dataset
+hf download l1997i/DurLAR --repo-type dataset
 
 # Example 2: in some cases you want to download files and move them to a specific folder. You can do that using the --local-dir option.
-huggingface-cli download l1997i/DurLAR --repo-type dataset --local-dir /home/my_username/datasets/DurLAR_tar/
+hf download l1997i/DurLAR --repo-type dataset --local-dir /home/my_username/datasets/DurLAR_tar/
 ```
 
 ### **Merge and Extract the Dataset**
